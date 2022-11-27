@@ -4,13 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="一、Execl批量导入弹窗, 博客">
-    <meta name="description" content="一、Execl批量导入弹窗1、自定义封装的弹窗组件  啥也不说了，拿来就用，看代码
-  温馨提示哦，组件基于vue2+ts+iview组件库哦
-
-&amp;lt;template&gt;
-  &amp;lt;div class=&#34;container&#34;&gt;
-    ">
+    <meta name="keywords" content="第一章、帝国的余辉之几度繁荣, 博客">
+    <meta name="description" content="仅以此纪录属于我的TI世界，帝国的余辉、蓝色的巨人、&#34;八叛徒&#34;与硅谷.......跟着我一起从AT&amp;T开始吧。。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>一、Execl批量导入弹窗 | 小镇先生</title>
+    <title>第一章、帝国的余辉之几度繁荣 | 小镇先生</title>
     <link rel="icon" type="image/png" href="/medias/2.png">
     
 
@@ -341,12 +336,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">一、Execl批量导入弹窗</h1>
+                    <h1 class="description center-align post-title">第一章、帝国的余辉之几度繁荣</h1>
                 </div>
             </div>
         </div>
@@ -370,8 +365,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
-                                <span class="chip bg-color">自定义封装组件</span>
+                            <a href="/tags/%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/">
+                                <span class="chip bg-color">浪潮之巅</span>
                             </a>
                         
                     </div>
@@ -382,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" class="post-category">
-                                组件封装
+                            <a href="/categories/%E6%88%91%E7%9A%84IT%E4%B8%96%E7%95%8C%E8%A7%82/" class="post-category">
+                                我的IT世界观
                             </a>
                         
                     </div>
@@ -416,219 +411,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、Execl批量导入弹窗"><a href="#一、Execl批量导入弹窗" class="headerlink" title="一、Execl批量导入弹窗"></a>一、Execl批量导入弹窗</h1><h2 id="1、自定义封装的弹窗组件"><a href="#1、自定义封装的弹窗组件" class="headerlink" title="1、自定义封装的弹窗组件"></a>1、自定义封装的弹窗组件</h2><p>  啥也不说了，拿来就用，看代码</p>
-<p>  <span style="color: red">温馨提示哦，组件基于vue2+ts+iview组件库哦</span></p>
+                <p><img src="/images/AT&amp;T2.png"></p>
+<h2 id="2、几度繁荣"><a href="#2、几度繁荣" class="headerlink" title="2、几度繁荣"></a>2、几度繁荣</h2><p>  1995年可以说是AT&amp;T公司的顶峰，接下来短短的十年里，他便分崩离析，不复存在了。AT&amp;T不紧不慢的向上走过了百年，才爬到顶点，走下坡路却只是短短的十年。今天我们看到的AT&amp;T实际上是由当年的小贝尔公司之一的西南贝尔公司（SBC）几次以小吃大合并出的类似于水电公司的设施服务公司，这类公司在美国统称为资源服务公司，毫无技术可言，这在后面细讲。</p>
 
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>ul<span class="token operator">></span>
-        <span class="token operator">&lt;</span>li v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(item,index) in idetiferList"</span> <span class="token punctuation">:</span>key<span class="token operator">=</span><span class="token string">"index"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>item<span class="token punctuation">}</span><span class="token punctuation">}</span>
-          <span class="token operator">&lt;</span>Icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"icon"</span> type<span class="token operator">=</span><span class="token string">"ios-close-circle"</span> @click<span class="token operator">=</span><span class="token string">"clearItem(index)"</span><span class="token operator">/</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"bottom"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>Input <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"search"</span> type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"identifers"</span> <span class="token punctuation">:</span>placeholder<span class="token operator">=</span><span class="token string">"`请输入或复制${nameMap[currentTab]}名称或标识，以空格、%、&amp;分隔，最多输入100条`"</span><span class="token operator">/</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>Button type<span class="token operator">=</span><span class="token string">"primary"</span>  @click<span class="token operator">=</span><span class="token string">"getVerifyData"</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>Icon type<span class="token operator">=</span><span class="token string">"ios-search"</span> style<span class="token operator">=</span><span class="token string">"font-size: 25px;"</span><span class="token operator">/</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token string">"font-size: 16px; margin-left: 5px;"</span><span class="token operator">></span>查询<span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
-<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> Prop<span class="token punctuation">,</span> Watch<span class="token punctuation">,</span> Emit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
-@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">PPrInfo</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+<p>  其实，从1995年起的这10年来年间，AT&amp;T本来有两次绝佳的发展机会；2000年前后的网络革命和从20世纪90年代中期延续至今的无线通信的飞跃。可是，AT&amp;T不仅没有利用好机会，反而在这两场变革中丢掉了性命。</p>
 
-  @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
-    <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">'st'</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  currentTab<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+<p>  100多年来AT&amp;T发展得非常健康。虽然他一直受着反垄断法的约束，但是美国政府的司法部门并没有正真要过他的命，每一次反垄断都是在帮助AT&amp;T修枝剪叶，让他更好的发展。AT&amp;T是美国仅有的两家被反垄断法拆分的公司之一（另一家是美孚石油公司），在介绍AT&amp;T之前，我们先来看看它的垄断地位是怎样形成的。</p>
 
-  nameMap <span class="token operator">=</span> <span class="token punctuation">{</span>
-    st<span class="token punctuation">:</span> <span class="token string">'试题'</span><span class="token punctuation">,</span>
-    sj<span class="token punctuation">:</span> <span class="token string">'试卷'</span><span class="token punctuation">,</span>
-    dc<span class="token punctuation">:</span> <span class="token string">'单词'</span><span class="token punctuation">,</span>
-    klb<span class="token punctuation">:</span> <span class="token string">'课例包'</span>
-  <span class="token punctuation">}</span>
+<p>  在AT&amp;T成立时，它的电话技术受专利保护，因此，它前十几年的发展一直一帆风顺。但是，早在1895年，它的专利技术就无效了。一夜之间，美国冒出了6000多家电话公司。我们以后还会提到，上个世纪初，美国曾经有过无数的汽车公司。10年内美国的电话装机数量从200百万户增加到3000万户。这时，AT&amp;T凭借领先的技术和成功的商业收购，很快扫平了所有的竞争对手。20世纪初，AT&amp;T几乎垄断了美国的电信业，并且在海外有很多的业务。1916年，AT&amp;T成为道琼斯20种工业指数中的一家公司。</p>
 
-  @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
-    <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">''</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  identifers<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+<p>  但是AT&amp;T的麻烦也伴随着公司的发展而来，美国政府的司法部盯上了它。1913年，根据司法部的金斯堡协议，AT&amp;T不得不收敛一下它的扩张。1925年它甚至将加拿大的电信业务分离，专注于美国市场。分离出的公司就是后来加拿大的公司北方电信。这次收缩歪打正着，使它成功的在1929-1933年的大萧条中存活下来。可以想象，如果当初AT&amp;T的摊子铺得太大。则躲过经济危机的可能性会小很多。事实上，很多当时道琼斯工业指数中的公司都没有逃过那次经济危机。</p>
 
-  idetiferList<span class="token punctuation">:</span>Array<span class="token operator">&lt;</span>string<span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<p>  大萧条后，AT&amp;T公司恢复的很快，第二次世界大战之后，美国的电话普及率达到50%，AT&amp;T成为美国最挣钱的公司之一。它的贝尔实验室也是成果累累。最值得一提的是，在第二次世界大战期间，贝尔实验室的天才青年科学家香农提出了信息论。信息论是整个现代通信的基础，并于控制论、系统论一道，成为信息时代的科学基础。到了上个世纪50年代，AT&amp;T又发展到美国司法部都不得不管一管的地步了。1956年，AT&amp;T和司法部达成协议，协议再次限制了他的活动范围。反垄断法逼着AT&amp;T靠科技进步来提升自己的实力。我在Google总部接待了很多中国政府的领导干部，他们都关心为什么美国小公司都很快能成为跨国公司，我认为其中一个原因就是反垄断法逼着这些公司追求技术进步。当一家公司开始垄断一个行业时，他会更多的倾向于利用自己的垄断资源，而不是继续依靠技术进步活得更多的利润，毕竟前者比后者容易的多。因此，AT&amp;T巩固了自己在技术上的领先地位。1948年，AT&amp;T实现了商用的微波通信；1962年，它发射了第一颗商用通信卫星。尽管存在一些小的竞争者。但他们无法撼动AT&amp;T的根基。</p>
 
-  lastOne<span class="token punctuation">:</span>boolean <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<p>  在整个20世纪直到90年代末的很长时间里，美国国际长途的电话价钱不是由市场决定的，而是由AT&amp;T和美国联邦通信委员会谈判决定的，定价是3美元一分钟。AT&amp;T计算加钱的方法听起来很合理-铺设光缆和电缆需要多少钱，购买设备需要多少钱，研发需要多少钱，雇接线员需要多少钱等，所以只有一分钟3美元才能不亏损。但事实上，到2002年，当国际长途电话费降到平均一分钟只需要30美分的时候，AT&amp;T仍然有1/3的毛利润。</p>
 
-  <span class="token keyword">public</span> <span class="token function">clearItem</span><span class="token punctuation">(</span>index<span class="token punctuation">:</span>number<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">void</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">.</span>idetiferList<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getLastArrOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>idetiferList<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>identifers <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>idetiferList<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-
-  @<span class="token function">Emit</span><span class="token punctuation">(</span><span class="token string">'getVerifyData'</span><span class="token punctuation">)</span>
-  <span class="token keyword">public</span> <span class="token function">getVerifyData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>idetiferList<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  @<span class="token function">Watch</span><span class="token punctuation">(</span><span class="token string">'identifers'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-    deep<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    immediate<span class="token punctuation">:</span> <span class="token boolean">true</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token keyword">public</span> <span class="token function">WatchIdentifer</span><span class="token punctuation">(</span>newValue<span class="token punctuation">:</span>any<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">void</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> tempArr <span class="token operator">=</span> newValue<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/%/g</span><span class="token punctuation">,</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/&amp;/g</span><span class="token punctuation">,</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> queryArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>tempArr<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      queryArr <span class="token operator">=</span> tempArr<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> item <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>queryArr<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        queryArr <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>queryArr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>idetiferList <span class="token operator">=</span> queryArr<span class="token punctuation">;</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getArr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  @<span class="token function">Emit</span><span class="token punctuation">(</span><span class="token string">'getLastArrOne'</span><span class="token punctuation">)</span>
-  <span class="token keyword">public</span> <span class="token function">getLastArrOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  @<span class="token function">Emit</span><span class="token punctuation">(</span><span class="token string">'getArr'</span><span class="token punctuation">)</span>
-  <span class="token keyword">public</span> <span class="token function">getArr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>idetiferList<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-
-<span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"less"</span> scoped<span class="token operator">></span>
-<span class="token punctuation">.</span>container <span class="token punctuation">{</span>
-  width<span class="token punctuation">:</span> 1000px<span class="token punctuation">;</span>
-  height<span class="token punctuation">:</span> 270px<span class="token punctuation">;</span>
-  margin<span class="token punctuation">:</span> 5px <span class="token number">0</span> <span class="token number">0</span> 90px<span class="token punctuation">;</span>
-  border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
-  box<span class="token operator">-</span>shadow<span class="token punctuation">:</span> 0px 0px 7px 0px <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token punctuation">.</span>content<span class="token operator">></span>ul <span class="token punctuation">{</span>
-    width<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
-    height<span class="token punctuation">:</span> 220px<span class="token punctuation">;</span>
-    display<span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-    padding<span class="token operator">-</span>top<span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
-    flex<span class="token operator">-</span>wrap<span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
-    justify<span class="token operator">-</span>content<span class="token punctuation">:</span> left<span class="token punctuation">;</span>
-    align<span class="token operator">-</span>items<span class="token punctuation">:</span> flex<span class="token operator">-</span>start<span class="token punctuation">;</span>
-    overflow<span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
-    border<span class="token operator">-</span>bottom<span class="token punctuation">:</span> 1px solid #dcdee2<span class="token punctuation">;</span>
-
-    li <span class="token punctuation">{</span>
-      width<span class="token punctuation">:</span> 188px<span class="token punctuation">;</span>
-      height<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
-      margin<span class="token operator">-</span>left<span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-      padding<span class="token punctuation">:</span> <span class="token number">0</span> 10px<span class="token punctuation">;</span>
-      line<span class="token operator">-</span>height<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
-      background<span class="token operator">-</span>color<span class="token punctuation">:</span> #f7fcff<span class="token punctuation">;</span>
-      position<span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
-      border<span class="token punctuation">:</span> 1px solid #dcdee2<span class="token punctuation">;</span>
-      border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
-      margin<span class="token operator">-</span>bottom<span class="token punctuation">:</span> 18px<span class="token punctuation">;</span>
-      overflow<span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
-      text<span class="token operator">-</span>overflow<span class="token punctuation">:</span>ellipsis<span class="token punctuation">;</span>
-      white<span class="token operator">-</span>space<span class="token punctuation">:</span>nowrap<span class="token punctuation">;</span>
-
-      <span class="token punctuation">.</span>icon <span class="token punctuation">{</span>
-        font<span class="token operator">-</span>size<span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
-        position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-        top<span class="token punctuation">:</span> 13px<span class="token punctuation">;</span>
-        right<span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
-        color<span class="token punctuation">:</span> #cbcfd4<span class="token punctuation">;</span>
-        cursor<span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token punctuation">.</span>bottom <span class="token punctuation">{</span>
-    width<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
-    height<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
-    display<span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-    align<span class="token operator">-</span>items<span class="token punctuation">:</span> center<span class="token punctuation">;</span>
-    padding<span class="token punctuation">:</span> <span class="token number">0</span> 10px<span class="token punctuation">;</span>
-    <span class="token regex">/deep/</span> <span class="token punctuation">.</span>ivu<span class="token operator">-</span>input <span class="token punctuation">{</span>
-      border<span class="token punctuation">:</span> 0px solid #dcdee2<span class="token punctuation">;</span>
-      width<span class="token punctuation">:</span> 880px<span class="token punctuation">;</span>
-      height<span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
-      font<span class="token operator">-</span>size<span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token regex">/deep/</span> <span class="token punctuation">.</span>ivu<span class="token operator">-</span>btn <span class="token punctuation">{</span>
-      margin<span class="token operator">-</span>left<span class="token punctuation">:</span> 362px<span class="token punctuation">;</span>
-      height<span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
-      z<span class="token operator">-</span>index<span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
-</code></pre>
-<h2 id="2、父组件调用改封装组件"><a href="#2、父组件调用改封装组件" class="headerlink" title="2、父组件调用改封装组件"></a>2、父组件调用改封装组件</h2><p>  啥也不说了，拿来就用，看代码</p>
-<p>  <span style="color: red">温馨提示哦，当时为了兼容一些样式问题，所以做了一些调整，可能样式会有一点点的小问题，不过很容易改的哦。。</span></p>
-<p>  再提示一个问题，就是mounted里写了监听事件，主要是实现，点击其他空白处关闭该弹窗的功能，当然不要忘记在destoryed钩子里销毁监听事件哦，还有调用改组件时，有很多字段要传，还有一些事件函数也要传，这个就看各位小伙伴实际情况去改了哦。。</p>
-
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>InputModal <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"input-fixed"</span> id<span class="token operator">=</span><span class="token string">"inputModal"</span> v<span class="token operator">-</span><span class="token keyword">if</span><span class="token operator">=</span><span class="token string">"showInputModal"</span> <span class="token punctuation">:</span>currentTab<span class="token operator">=</span><span class="token string">"label"</span> <span class="token punctuation">:</span>identifers<span class="token operator">=</span><span class="token string">"name"</span> 
-    @getArr<span class="token operator">=</span><span class="token string">"getInputModalArr"</span> @getVerifyData<span class="token operator">=</span><span class="token string">"getTableData"</span> @getLastArrOne<span class="token operator">=</span><span class="token string">"getLastArrOne"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>InputModal<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
-
-<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
-
-@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    InputModal<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./InputModal.vue'</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
-
-  mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'mousewheel'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handleScroll<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">const</span> inputModal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"inputModal"</span><span class="token punctuation">)</span>
-        <span class="token keyword">const</span> inputName <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"inputName"</span><span class="token punctuation">)</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>inputModal <span class="token operator">&amp;&amp;</span> inputName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>inputModal<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>target<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>inputName<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>target<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastArrOne<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">this</span><span class="token punctuation">.</span>showInputModal <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-          <span class="token keyword">this</span><span class="token punctuation">.</span>lastArrOne <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token function">destroyed</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
-    window<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'mousewheel'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>handleScroll<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
-</code></pre>
-<h2 id="2、父组件调用改封装组件-1"><a href="#2、父组件调用改封装组件-1" class="headerlink" title="2、父组件调用改封装组件"></a>2、父组件调用改封装组件</h2><p>  这里展示一下效果：</p>
-
-<p><img src="/images/execl.gif"></p>
-
+<p>  到了20世纪80年代，美国司法部再次对AT&amp;T公司提起反垄断诉讼。这次，美国政府终于打赢了这场旷日持久的官司，这才导致了1984年AT&amp;T的第一次分家。这次反垄断的官司，不过是替AT&amp;T这颗大树剪剪枝。剪完枝后，AT&amp;T公司反而发展的更健康。10年后，AT&amp;T又如日中天了。当时，AT&amp;T不仅在传统的电话业务上，而且在新兴的网络和移动通信方面，都处于世界领先地位。</p>
                 
             </div>
             <hr/>
@@ -654,7 +452,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jjwu27.github.io/2022/11/27/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-1%E3%80%81execl%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E5%BC%B9%E7%AA%97/">https://jjwu27.github.io/2022/11/27/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-1%E3%80%81execl%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E5%BC%B9%E7%AA%97/</a>
+                    <a href="https://jjwu27.github.io/2022/11/27/%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%81%E5%B8%9D%E5%9B%BD%E7%9A%84%E4%BD%99%E8%BE%89%E4%B9%8B%E5%87%A0%E5%BA%A6%E7%B9%81%E8%8D%A3/">https://jjwu27.github.io/2022/11/27/%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%81%E5%B8%9D%E5%9B%BD%E7%9A%84%E4%BD%99%E8%BE%89%E4%B9%8B%E5%87%A0%E5%BA%A6%E7%B9%81%E8%8D%A3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -692,8 +490,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
-                                    <span class="chip bg-color">自定义封装组件</span>
+                                <a href="/tags/%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/">
+                                    <span class="chip bg-color">浪潮之巅</span>
                                 </a>
                             
                         </div>
@@ -1043,19 +841,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/11/27/%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%81%E5%B8%9D%E5%9B%BD%E7%9A%84%E4%BD%99%E8%BE%89%E4%B9%8B%E5%87%A0%E5%BA%A6%E7%B9%81%E8%8D%A3/">
+                <a href="/2022/11/27/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E7%AE%80%E5%8F%B2/%E4%B8%80%E3%80%81%E8%BF%91%E4%BB%A3%E4%B8%AD%E5%9B%BD%E6%B0%91%E6%97%8F%E5%A4%8D%E5%85%B4%E7%9A%84%E8%89%B0%E9%9A%BE%E6%8E%A2%E7%B4%A2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="第一章、帝国的余辉之几度繁荣">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="一、近代中国的艰难探索">
                         
-                        <span class="card-title">第一章、帝国的余辉之几度繁荣</span>
+                        <span class="card-title">一、近代中国的艰难探索</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            仅以此纪录属于我的TI世界，帝国的余辉、蓝色的巨人、"八叛徒"与硅谷.......跟着我一起从AT&T开始吧。。
+                            青年是标志时代的最灵敏的晴雨表，清风正气、蓬勃朝气，你我正当时。仅以此记录党史已加深学习和印象，也希望本人可以在迷茫的人生阶段静下心来。
                         
                     </div>
                     <div class="publish-info">
@@ -1066,8 +864,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%88%91%E7%9A%84IT%E4%B8%96%E7%95%8C%E8%A7%82/" class="post-category">
-                                    我的IT世界观
+                            <a href="/categories/%E6%88%91%E5%92%8C%E6%88%91%E7%9A%84%E5%9B%BD/" class="post-category">
+                                    我和我的国
                                 </a>
                             
                             
@@ -1077,8 +875,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/">
-                        <span class="chip bg-color">浪潮之巅</span>
+                    <a href="/tags/%E5%85%9A%E5%8F%B2%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">党史学习</span>
                     </a>
                     
                 </div>
@@ -1092,13 +890,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/27/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-7%E3%80%81iview%E7%BB%84%E4%BB%B6%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89select/">
+                <a href="/2022/11/27/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-1%E3%80%81execl%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E5%BC%B9%E7%AA%97/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="六、iview中的select组件">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="一、Execl批量导入弹窗">
                         
-                        <span class="card-title">六、iview中的select组件</span>
+                        <span class="card-title">一、Execl批量导入弹窗</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1115,8 +913,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%83%AD%E7%88%B1%E6%88%91%E7%9A%84%E5%B7%A5%E4%BD%9C/" class="post-category">
-                                    热爱我的工作
+                            <a href="/categories/%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" class="post-category">
+                                    组件封装
                                 </a>
                             
                             
@@ -1126,8 +924,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
-                        <span class="chip bg-color">工作知识总结</span>
+                    <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
+                        <span class="chip bg-color">自定义封装组件</span>
                     </a>
                     
                 </div>
