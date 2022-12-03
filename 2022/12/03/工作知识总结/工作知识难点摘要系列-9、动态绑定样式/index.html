@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="七、this.$emit(), 博客">
-    <meta name="description" content="一、工作知识难点摘要-this.$emit()的使用1、this.$emit()的使用1.1、背景  这是一个很简单的知识点，那为啥我要写呢，这么基础的东西有啥好写的，妈的我就是菜，老子记不住，每次用都还得查一下，今天必须写在我的集锦里，大">
+    <meta name="keywords" content="八、动态绑定样式, 博客">
+    <meta name="description" content="一、工作知识难点摘要-动态样式绑定1、动态样式绑定的使用1.1、背景  动态样式其实经常用到，而且写法也很简单，然后我总是忘记，好烦。为了加深印象，我决定写成博客吧。实际场景经常就是，我们的样式不是写死的而是做一下灵活的判断去决定这个样式要">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>七、this.$emit() | 小镇先生</title>
+    <title>八、动态绑定样式 | 小镇先生</title>
     <link rel="icon" type="image/png" href="/medias/2.png">
     
 
@@ -336,12 +336,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">七、this.$emit()</h1>
+                    <h1 class="description center-align post-title">八、动态绑定样式</h1>
                 </div>
             </div>
         </div>
@@ -390,7 +390,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-30
+                    2022-12-03
                 </div>
                 
 
@@ -411,109 +411,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、工作知识难点摘要-this-emit-的使用"><a href="#一、工作知识难点摘要-this-emit-的使用" class="headerlink" title="一、工作知识难点摘要-this.$emit()的使用"></a>一、工作知识难点摘要-this.$emit()的使用</h1><h2 id="1、this-emit-的使用"><a href="#1、this-emit-的使用" class="headerlink" title="1、this.$emit()的使用"></a>1、this.$emit()的使用</h2><h3 id="1-1、背景"><a href="#1-1、背景" class="headerlink" title="1.1、背景"></a>1.1、背景</h3><p>  这是一个很简单的知识点，那为啥我要写呢，这么基础的东西有啥好写的，妈的我就是菜，老子记不住，每次用都还得查一下，今天必须写在我的集锦里，大爷的！！！</p>
+                <h1 id="一、工作知识难点摘要-动态样式绑定"><a href="#一、工作知识难点摘要-动态样式绑定" class="headerlink" title="一、工作知识难点摘要-动态样式绑定"></a>一、工作知识难点摘要-动态样式绑定</h1><h2 id="1、动态样式绑定的使用"><a href="#1、动态样式绑定的使用" class="headerlink" title="1、动态样式绑定的使用"></a>1、动态样式绑定的使用</h2><h3 id="1-1、背景"><a href="#1-1、背景" class="headerlink" title="1.1、背景"></a>1.1、背景</h3><p>  动态样式其实经常用到，而且写法也很简单，然后我总是忘记，好烦。为了加深印象，我决定写成博客吧。实际场景经常就是，我们的样式不是写死的而是做一下灵活的判断去决定这个样式要不要加，或者根据不同场景选择不同样式。</p>
 
-<h3 id="1-2-第一种写法"><a href="#1-2-第一种写法" class="headerlink" title="1.2 第一种写法"></a>1.2 第一种写法</h3><p>  首先，我是把vue和ts结合着写的，因为工作中都是结合的，第一种写法用的是ts的装饰器@Emit，那么直接看代码。首先啊，子组件得引入装饰器Emit,然后点击button，触发事件deliverValue，该事件就是传值的，我们在子组件写@Emit('这里放的是名称，待会父组件引用子组件时，子组件里绑定的事件要与这个名字保持一致哦')</p>
+<h3 id="1-2-第来看下写法吧"><a href="#1-2-第来看下写法吧" class="headerlink" title="1.2 第来看下写法吧"></a>1.2 第来看下写法吧</h3><p>  很简单，直接上代码</p>
 
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//首先我们看子组件Son.vue</span>
-<span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"deliverValue"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+  <span class="token comment" spellcheck="true">//1、类名可以是一个变量</span>
+  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"statusMap[row.status].theme"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+  <span class="token comment" spellcheck="true">//2、类名可以是一个变量加字符串，index是变量</span>
+  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"'analysis_' + index"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+  <span class="token comment" spellcheck="true">//3、可以是等于不等于的判断结果，是否显示</span>
+  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{'slot-legends': chart.type === 'number'}"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+  <span class="token comment" spellcheck="true">//4、可以是布尔变量,这里isshow是布尔值</span>
+  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{ 'is-open': isshow }"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  
+  <span class="token comment" spellcheck="true">//5、可以是等式判断结合布尔值（用与或非结合）</span>
+  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{'is-disable':type=='entity' &amp;&amp; !canDownLoad}"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+  <span class="token comment" spellcheck="true">//6、可以是等于不等于的判断结果，是否显示</span>
+  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"`legends-container ${size}`"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+  <span class="token comment" spellcheck="true">//7、可以是三元表达式</span>
+  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"showDrawer ? 'right' : 'left'"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+  <span class="token comment" spellcheck="true">//8、可以同时动态多个样式</span>
+  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{'phrase-class':true,'phrase-color':!isDetail}"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
-<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> Emit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
-  @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> utralMenArr<span class="token punctuation">:</span>any <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'迪迦'</span><span class="token punctuation">,</span><span class="token string">'塞罗'</span><span class="token punctuation">,</span><span class="token string">'捷德'</span><span class="token punctuation">,</span><span class="token string">'欧布'</span><span class="token punctuation">,</span><span class="token string">'艾克斯'</span><span class="token punctuation">,</span><span class="token string">'阿古茹'</span><span class="token punctuation">]</span>
-
-    @<span class="token function">Emit</span><span class="token punctuation">(</span><span class="token string">'deliverValue'</span><span class="token punctuation">)</span>
-    <span class="token keyword">public</span> <span class="token function">deliverValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>utralMenArr<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
-
-
-<span class="token comment" spellcheck="true">//然后我们来看父组件Father.vue</span>
-<span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>Son @deliverValue<span class="token operator">=</span><span class="token string">"getArr"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Son<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
-<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> Emit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
-  @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      Son<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/pages/Son.vue'</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
-
-    <span class="token keyword">public</span> <span class="token function">getArr</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
-</code></pre>
-<h3 id="1-3-第二种写法"><a href="#1-3-第二种写法" class="headerlink" title="1.3 第二种写法"></a>1.3 第二种写法</h3><p>  那么第二种写法呢，就是用this.$emit()了，基本用法和上面那个是一样的，只不过是换了一种写法，那我们直接来看吧。子组件的this.$emit('函数名','传的值')</p>
-
-<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//首先我们看子组件Son.vue</span>
-<span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"deliverValue"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
-<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
-  @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
-
-    <span class="token keyword">const</span> utralMenArr<span class="token punctuation">:</span>any <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'迪迦'</span><span class="token punctuation">,</span><span class="token string">'塞罗'</span><span class="token punctuation">,</span><span class="token string">'捷德'</span><span class="token punctuation">,</span><span class="token string">'欧布'</span><span class="token punctuation">,</span><span class="token string">'艾克斯'</span><span class="token punctuation">,</span><span class="token string">'阿古茹'</span><span class="token punctuation">]</span>
-
-    <span class="token keyword">public</span> <span class="token function">deliverValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'deliverValue'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>utralMenArr<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-
-    mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
-
-
-<span class="token comment" spellcheck="true">//然后我们来看父组件Father.vue</span>
-<span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>Son @deliverValue<span class="token operator">=</span><span class="token string">"getArr"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Son<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
-<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
-  <span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> Emit <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
-  @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      Son<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/pages/Son.vue'</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
-
-    <span class="token keyword">public</span> <span class="token function">getArr</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
 </code></pre>
 
                 
@@ -541,7 +467,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jjwu27.github.io/2022/11/30/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-8%E3%80%81this.$emit()/">https://jjwu27.github.io/2022/11/30/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-8%E3%80%81this.$emit()/</a>
+                    <a href="https://jjwu27.github.io/2022/12/03/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-9%E3%80%81%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%A0%B7%E5%BC%8F/">https://jjwu27.github.io/2022/12/03/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-9%E3%80%81%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%A0%B7%E5%BC%8F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -926,9 +852,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/12/03/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-9%E3%80%81%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%A0%B7%E5%BC%8F/">
                     <div class="card-image">
@@ -946,9 +873,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -961,6 +888,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -979,31 +907,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/27/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E7%AE%80%E5%8F%B2/%E4%BA%8C%E3%80%81%E4%BA%94%E5%9B%9B%E8%BF%90%E5%8A%A8%E5%92%8C%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E7%9A%84%E4%BC%A0%E6%92%AD/">
+                <a href="/2022/11/30/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-8%E3%80%81this.$emit()/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="第二章、五四运动和马克思主义的传播">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="七、this.$emit()">
                         
-                        <span class="card-title">第二章、五四运动和马克思主义的传播</span>
+                        <span class="card-title">七、this.$emit()</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            青年是标志时代的最灵敏的晴雨表，清风正气、蓬勃朝气，你我正当时。仅以此记录党史已加深学习和印象，也希望本人可以在迷茫的人生阶段静下心来。
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%88%91%E5%92%8C%E6%88%91%E7%9A%84%E5%9B%BD/" class="post-category">
-                                    我和我的国
+                            <a href="/categories/%E7%83%AD%E7%88%B1%E6%88%91%E7%9A%84%E5%B7%A5%E4%BD%9C/" class="post-category">
+                                    热爱我的工作
                                 </a>
                             
                             
@@ -1013,8 +941,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%85%9A%E5%8F%B2%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">党史学习</span>
+                    <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">工作知识总结</span>
                     </a>
                     
                 </div>
