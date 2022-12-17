@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="九、动态绑定样式, 博客">
-    <meta name="description" content="一、工作知识难点摘要-动态样式绑定1、动态样式绑定的使用1.1、背景  动态样式其实经常用到，而且写法也很简单，然后我总是忘记，好烦。为了加深印象，我决定写成博客吧。实际场景经常就是，我们的样式不是写死的而是做一下灵活的判断去决定这个样式要">
+    <meta name="keywords" content="十一、在线预览PDF, 博客">
+    <meta name="description" content="一、PDF.js的使用1、简单介绍  最近做了个事，工作中遇到一个需求，就是要在线显示pdf，那咋办，我这垃圾小白也没做过。于是乎问了老大，老大说用pdf.js。然后乎我就去看了一下，发现好用又简单。既然这么实用那就给记下来吧！！！！！
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>九、动态绑定样式 | 小镇先生</title>
+    <title>十一、在线预览PDF | 小镇先生</title>
     <link rel="icon" type="image/png" href="/medias/2.png">
     
 
@@ -336,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">九、动态绑定样式</h1>
+                    <h1 class="description center-align post-title">十一、在线预览PDF</h1>
                 </div>
             </div>
         </div>
@@ -390,7 +392,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-12-03
+                    2022-12-17
                 </div>
                 
 
@@ -411,35 +413,63 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、工作知识难点摘要-动态样式绑定"><a href="#一、工作知识难点摘要-动态样式绑定" class="headerlink" title="一、工作知识难点摘要-动态样式绑定"></a>一、工作知识难点摘要-动态样式绑定</h1><h2 id="1、动态样式绑定的使用"><a href="#1、动态样式绑定的使用" class="headerlink" title="1、动态样式绑定的使用"></a>1、动态样式绑定的使用</h2><h3 id="1-1、背景"><a href="#1-1、背景" class="headerlink" title="1.1、背景"></a>1.1、背景</h3><p>  动态样式其实经常用到，而且写法也很简单，然后我总是忘记，好烦。为了加深印象，我决定写成博客吧。实际场景经常就是，我们的样式不是写死的而是做一下灵活的判断去决定这个样式要不要加，或者根据不同场景选择不同样式。</p>
+                <h1 id="一、PDF-js的使用"><a href="#一、PDF-js的使用" class="headerlink" title="一、PDF.js的使用"></a>一、PDF.js的使用</h1><h2 id="1、简单介绍"><a href="#1、简单介绍" class="headerlink" title="1、简单介绍"></a>1、简单介绍</h2><p>  最近做了个事，工作中遇到一个需求，就是要在线显示pdf，那咋办，我这垃圾小白也没做过。于是乎问了老大，老大说用pdf.js。然后乎我就去看了一下，发现好用又简单。既然这么实用那就给记下来吧！！！！！</p>
 
-<h3 id="1-2-第来看下写法吧"><a href="#1-2-第来看下写法吧" class="headerlink" title="1.2 第来看下写法吧"></a>1.2 第来看下写法吧</h3><p>  很简单，直接上代码</p>
+<h2 id="2、使用PDF-js"><a href="#2、使用PDF-js" class="headerlink" title="2、使用PDF.js"></a>2、使用PDF.js</h2><h3 id="2-1、下载pdf-js"><a href="#2-1、下载pdf-js" class="headerlink" title="2.1、下载pdf.js"></a>2.1、下载pdf.js</h3><p>  首先啊，我们不需要额外下载插件，而是直接去官网，下载pdf.js的文件。下面附上下载链接</p>
+
+<p><a target="_blank" rel="noopener" href="http://mozilla.github.io/pdf.js">pdf.js官网</a></p>
+<p><img src="/images/pdfjs.jpg"></p>
+<h3 id="2-2、在项目中添加pdf-js"><a href="#2-2、在项目中添加pdf-js" class="headerlink" title="2.2、在项目中添加pdf.js"></a>2.2、在项目中添加pdf.js</h3><p>  下载后的文件结构是这样的，三个子文件，build、web、license。这个license是可以直接删除的，没啥用。</p>
+
+<p><img src="/images/jiegou.png"></p>
+<p>  那么我们呢直接把整个文件夹放进我们项目中的public文件夹下面就好啦！这样就可以用啦</p>
+
+<p><img src="/images/mulu.jpg"></p>
+<h3 id="2-3、在项目中使用pdf-js"><a href="#2-3、在项目中使用pdf-js" class="headerlink" title="2.3、在项目中使用pdf.js"></a>2.3、在项目中使用pdf.js</h3><p>  那么怎么使用呢？首先啊，我们还是得用到upload组件，因为我们要上传pdf文件给后台，upload组件在音频那块已经说过了，这里简单说一下吧。。。那个那个回调函数就不写了啊，大家可以去看audio音频的那个文章，也是这个系列的。那么我们上传过pdf之后啊，后台会返回这个文件的标识：xxxxxxxxx.pdf</p>
+
+<p>  有了这个标识后我们应该怎么办呢，当然是调用接口啦，比如说这个接口叫：getPdfData,假装引用一下。接口是后端写的，我们以上传返回后的文件标识为参数调用改接口，然后接口会返回一个地址，这就是文件的地址了。</p>
 
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token comment" spellcheck="true">//1、类名可以是一个变量</span>
-  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"statusMap[row.status].theme"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-
-  <span class="token comment" spellcheck="true">//2、类名可以是一个变量加字符串，index是变量</span>
-  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"'analysis_' + index"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-
-  <span class="token comment" spellcheck="true">//3、可以是等于不等于的判断结果，是否显示</span>
-  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{'slot-legends': chart.type === 'number'}"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-
-  <span class="token comment" spellcheck="true">//4、可以是布尔变量,这里isshow是布尔值</span>
-  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{ 'is-open': isshow }"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-  
-  <span class="token comment" spellcheck="true">//5、可以是等式判断结合布尔值（用与或非结合）</span>
-  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{'is-disable':type=='entity' &amp;&amp; !canDownLoad}"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-
-  <span class="token comment" spellcheck="true">//6、可以是等于不等于的判断结果，是否显示</span>
-  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"`legends-container ${size}`"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-
-  <span class="token comment" spellcheck="true">//7、可以是三元表达式</span>
-  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"showDrawer ? 'right' : 'left'"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-
-  <span class="token comment" spellcheck="true">//8、可以同时动态多个样式</span>
-  <span class="token operator">&lt;</span>div <span class="token punctuation">:</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"{'phrase-class':true,'phrase-color':!isDetail}"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>Upload ref<span class="token operator">=</span><span class="token string">"uploadStandardWord"</span> style<span class="token operator">=</span><span class="token string">"display:inline-block"</span> <span class="token punctuation">:</span>action<span class="token operator">=</span><span class="token string">"uploadObj.action"</span> <span class="token punctuation">:</span>multiple<span class="token operator">=</span><span class="token string">"false"</span> <span class="token punctuation">:</span>show<span class="token operator">-</span>upload<span class="token operator">-</span>list<span class="token operator">=</span><span class="token string">"false"</span> <span class="token punctuation">:</span>accept<span class="token operator">=</span><span class="token string">"uploadObj.accept"</span> <span class="token punctuation">:</span>format<span class="token operator">=</span><span class="token string">"uploadObj.format"</span> <span class="token punctuation">:</span>max<span class="token operator">-</span>size<span class="token operator">=</span><span class="token string">"uploadObj.maxSize"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>exceeded<span class="token operator">-</span>size<span class="token operator">=</span><span class="token string">"exceededSizeFun"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>format<span class="token operator">-</span>error<span class="token operator">=</span><span class="token string">"formatError"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>success<span class="token operator">=</span><span class="token string">"(response)=>handleSuccess(response)"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>error<span class="token operator">=</span><span class="token string">"handleError"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Upload<span class="token operator">></span>
+    <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"openPDF"</span><span class="token operator">></span>在新窗口打开pdf<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getPdfData <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/assets/js/utils'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+  uploadObj<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    action<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+    accept<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+    maxSize<span class="token punctuation">:</span> number<span class="token punctuation">;</span>
+    format<span class="token punctuation">:</span> Array<span class="token operator">&lt;</span>string<span class="token operator">></span><span class="token punctuation">;</span>
+    data<span class="token punctuation">:</span> any<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+      action<span class="token punctuation">:</span> <span class="token string">'/graphApi/api/v1/common/source/file/upload'</span><span class="token punctuation">,</span>
+      accept<span class="token punctuation">:</span> <span class="token string">'.pdf'</span><span class="token punctuation">,</span>
+      format<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'pdf'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      maxSize<span class="token punctuation">:</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//1个G</span>
+      data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token function">openPDF</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//params是接口参数，问后端</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> awiat <span class="token function">getPdfData</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//window.open就是在新窗口打开网页，然后引用pdf.js的文件，并且把地址传进去就好了，是不是很简单</span>
+      window<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`/pdf/web/viewer.html?file=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>pdfUrl<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
 </code></pre>
 
                 
@@ -467,7 +497,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jjwu27.github.io/2022/12/03/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-9%E3%80%81%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%A0%B7%E5%BC%8F/">https://jjwu27.github.io/2022/12/03/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-9%E3%80%81%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%A0%B7%E5%BC%8F/</a>
+                    <a href="https://jjwu27.github.io/2022/12/17/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-11%E3%80%81PDF.js%E7%9A%84%E4%BD%BF%E7%94%A8/">https://jjwu27.github.io/2022/12/17/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-11%E3%80%81PDF.js%E7%9A%84%E4%BD%BF%E7%94%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -856,13 +886,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/12/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-2%E3%80%81iview-Table%E4%B9%8B%E5%8A%A8%E6%80%81%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC/">
+                <a href="/2022/12/17/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-12%E3%80%81%E5%9C%A8%E7%BA%BF%E6%B5%8F%E8%A7%88word%E5%B9%B6%E4%B8%8B%E8%BD%BD/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="二、iview-Table之动态合并单元格">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="十二、在线预览Word">
                         
-                        <span class="card-title">二、iview-Table之动态合并单元格</span>
+                        <span class="card-title">十二、在线预览Word</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -873,14 +903,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-17
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" class="post-category">
-                                    组件封装
+                            <a href="/categories/%E7%83%AD%E7%88%B1%E6%88%91%E7%9A%84%E5%B7%A5%E4%BD%9C/" class="post-category">
+                                    热爱我的工作
                                 </a>
                             
                             
@@ -890,8 +920,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
-                        <span class="chip bg-color">自定义封装组件</span>
+                    <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">工作知识总结</span>
                     </a>
                     
                 </div>
@@ -905,13 +935,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/11/30/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-8%E3%80%81this.$emit()/">
+                <a href="/2022/12/15/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-10%E3%80%81%E6%95%B0%E6%8D%AE%E6%B5%81%E4%BC%A0%E9%80%92%E6%A1%86%E6%9E%B6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="八、this.$emit()">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="十、数据流传递框架">
                         
-                        <span class="card-title">八、this.$emit()</span>
+                        <span class="card-title">十、数据流传递框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -922,7 +952,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-15
                             </span>
                         <span class="publish-author">
                             

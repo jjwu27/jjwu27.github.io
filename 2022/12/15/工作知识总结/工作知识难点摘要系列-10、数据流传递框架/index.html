@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="三、audio标签的使用, 博客">
-    <meta name="description" content="今天用audio实现了一个功能。平常我们用audio的时候啊，都是一次性用到好几个，那么一个页面有好几个音频标签的时候，怎么控制单一音频的播放暂停呢？怎么控制每次点击是否从头播放呢？怎么协调所有音频的播放和暂停呢？">
+    <meta name="keywords" content="十、数据流传递框架, 博客">
+    <meta name="description" content="一、数据流传递框架1、简单介绍  先说一下为啥写这个都咚咚，主要是想了解一下在开发一个完整模块的时候怎么实现数据的收集，上传，逐层传递后的渲染，帮助自己理解整个模块的开发。偷偷学习了组内大佬的开发思路，不能被露哥发现喽，偷学。。。哈哈哈哈！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>三、audio标签的使用 | 小镇先生</title>
+    <title>十、数据流传递框架 | 小镇先生</title>
     <link rel="icon" type="image/png" href="/medias/2.png">
     
 
@@ -336,12 +336,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">三、audio标签的使用</h1>
+                    <h1 class="description center-align post-title">十、数据流传递框架</h1>
                 </div>
             </div>
         </div>
@@ -365,8 +365,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
-                                <span class="chip bg-color">自定义封装组件</span>
+                            <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
+                                <span class="chip bg-color">工作知识总结</span>
                             </a>
                         
                     </div>
@@ -377,8 +377,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" class="post-category">
-                                组件封装
+                            <a href="/categories/%E7%83%AD%E7%88%B1%E6%88%91%E7%9A%84%E5%B7%A5%E4%BD%9C/" class="post-category">
+                                热爱我的工作
                             </a>
                         
                     </div>
@@ -390,7 +390,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-12-11
+                    2022-12-15
                 </div>
                 
 
@@ -411,94 +411,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、audio标签的使用"><a href="#一、audio标签的使用" class="headerlink" title="一、audio标签的使用"></a>一、audio标签的使用</h1><h2 id="1、简单介绍"><a href="#1、简单介绍" class="headerlink" title="1、简单介绍"></a>1、简单介绍</h2><p>  我太牛了，我太牛了，我太牛了！！！！！！！！！！！！！！！！！！！！！！！！！！！今天用audio实现了一个功能。平常我们用audio的时候啊，都是一次性用到好几个，那么一个页面有好几个音频标签的时候，怎么控制单一音频的播放暂停呢？怎么控制每次点击是否从头播放呢？怎么协调所有音频的播放和暂停呢？？？？来来来，教学教学。那么音频的使用分为好几个部分，首先你得调用音频组件，其次你得上传音频给后端，再获取后端的音频地址，将地址赋值给audio标签的src属性，点击就可以播放音频啦。</p>
+                <h1 id="一、数据流传递框架"><a href="#一、数据流传递框架" class="headerlink" title="一、数据流传递框架"></a>一、数据流传递框架</h1><h2 id="1、简单介绍"><a href="#1、简单介绍" class="headerlink" title="1、简单介绍"></a>1、简单介绍</h2><p>  先说一下为啥写这个都咚咚，主要是想了解一下在开发一个完整模块的时候怎么实现数据的收集，上传，逐层传递后的渲染，帮助自己理解整个模块的开发。偷偷学习了组内大佬的开发思路，不能被露哥发现喽，偷学。。。哈哈哈哈！！！感谢露哥，感谢露哥，感谢露哥，嘿嘿嘿！！！</p>
 
-<h3 id="1-1、上传音频"><a href="#1-1、上传音频" class="headerlink" title="1.1、上传音频"></a>1.1、上传音频</h3><p>  那我们从第一步开始，首先你想播放音频，必须得有音频，那么在实际工作中我们访问的音频一定是后端传过来的，那么后端的音频又是从哪里来的呢，要么本来就有默认的，要么就是用户自己导入的音频。那我们先来看怎么导入音频吧。xdm，上代码！！！</p>
-<p>  上传首先要用到upload组件，而且考虑的比较细致的话，上传的过程还是比较复杂的，对了我这里用的是iview的组件库，关于upload不熟悉的可以去官网看啦，这里简单解释一下组件绑定的属性都是什么意思。</p>
-<p>    <strong>action：</strong>那么这个呢就是我们上传的地址音频上传到哪里去（后端提供）。</p>
-<p>    <strong>multiple：</strong>这个是指是否支持上传多个文件。</p>
-<p>    <strong>show-upload-list：</strong>是否显示已上传文件列表。</p>
-<p>    <strong>accept：</strong>接受上传的文件类型有哪些（一般音频的话就是MP3, wov, Wav）。</p>
-<p>    <strong>format：</strong>支持的文件类型，与accept不同的是，format是识别文件的后缀名，accept为input标签原生的accept属性，会在选择文件时过滤，可以两者结合使用。</p>
-<p>    <strong>max-size：</strong>文件大小限制，单位kb。</p>
-<p>  好的，了解了基本属性后，那我们再来说一说这里面涉及到的很多的回调函数啊。</p>
-<p>  <strong>1、on-exceeded-size：</strong>这个是文件大小校验失败的回调，文件超出指定大小限制时的钩子。</p>
-<p>  <strong>2、on-format-error：</strong>文件格式验证失败时的钩子。</p>
-<p>  <strong>3、handleSuccess：</strong>文件上传成功后的钩子，注意response返回值。</p>
-<p>  <strong>4、on-error：</strong>文件上传失败后的钩子。</p>
+<h2 id="2、基本框架"><a href="#2、基本框架" class="headerlink" title="2、基本框架"></a>2、基本框架</h2><p>  首先，我们来看一下整体的HTML的结构，父组件套子组件，子组件再套子组件，那我们我们的数据是在第一层组件请求来的，所以我们的数据是要传递下去的，这里比较重要的就是我们的第二层组件和第三层组件都是根据数据来渲染的，并且组件基本上都是用v-model绑定数据，这样我们在做一下操作的时候就会动态将绑定的数据更改，最后传回到外层组件，也就是我们的收集数据。那来简单的看一下HTML结构吧，比如我们要展示单词的信息，并且可以手动修改。</p>
+
+<h2 id="2-1、第一层"><a href="#2-1、第一层" class="headerlink" title="2.1、第一层"></a>2.1、第一层</h2><p>  先来看第一层，第一层很简单，引入一个子组件，子组件绑定一个id。</p>
 
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>Upload ref<span class="token operator">=</span><span class="token string">"audioUpload"</span> <span class="token punctuation">:</span>action<span class="token operator">=</span><span class="token string">"uploadObj.action"</span> <span class="token punctuation">:</span>multiple<span class="token operator">=</span><span class="token string">"false"</span> <span class="token punctuation">:</span>show<span class="token operator">-</span>upload<span class="token operator">-</span>list<span class="token operator">=</span><span class="token string">"false"</span> <span class="token punctuation">:</span>accept<span class="token operator">=</span><span class="token string">"uploadObj.accept"</span> <span class="token punctuation">:</span>format<span class="token operator">=</span><span class="token string">"uploadObj.format"</span> <span class="token punctuation">:</span>max<span class="token operator">-</span>size<span class="token operator">=</span><span class="token string">"uploadObj.maxSize"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>exceeded<span class="token operator">-</span>size<span class="token operator">=</span><span class="token string">"()=>exceededSizeFun('audio')"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>format<span class="token operator">-</span>error<span class="token operator">=</span><span class="token string">"()=>formatError('audio')"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>success<span class="token operator">=</span><span class="token string">"(response)=>handleSuccess(response,'audio',index,audioIndex)"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>error<span class="token operator">=</span><span class="token string">"handleError"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>Button<span class="token operator">></span>导入音频<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>Upload<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
-<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
-
-@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  components<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
-
-  <span class="token comment" spellcheck="true">//upload属性参数</span>
-  <span class="token keyword">public</span> <span class="token keyword">get</span> uploadObj <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    action<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
-    accept<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
-    maxSize<span class="token punctuation">:</span> number<span class="token punctuation">;</span>
-    format<span class="token punctuation">:</span> Array<span class="token operator">&lt;</span>string<span class="token operator">></span><span class="token punctuation">;</span>
-    data<span class="token punctuation">:</span> any<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token punctuation">{</span>
-     <span class="token keyword">return</span> <span class="token punctuation">{</span>
-       action<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`/graphApi/word-card/word/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/uploadFile`</span></span><span class="token punctuation">,</span>
-       accept<span class="token punctuation">:</span> <span class="token string">'.MP3,.wov,.Wav'</span><span class="token punctuation">,</span>
-       format<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'MP3'</span><span class="token punctuation">,</span> <span class="token string">'wov'</span><span class="token punctuation">,</span> <span class="token string">'Wav'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-       maxSize<span class="token punctuation">:</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">,</span>
-       data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-         id<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>id
-       <span class="token punctuation">}</span>
-     <span class="token punctuation">}</span>
-   <span class="token punctuation">}</span>
-
-  <span class="token comment" spellcheck="true">//文件大小校验失败回调</span>
-  <span class="token keyword">public</span> exceededSizeFun <span class="token punctuation">(</span>type<span class="token punctuation">:</span> string<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>$Message<span class="token punctuation">.</span><span class="token function">warning</span><span class="token punctuation">(</span>
-      <span class="token template-string"><span class="token string">`文件大小不能超过</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">[</span>type <span class="token operator">===</span> <span class="token string">'audio'</span> <span class="token operator">?</span> <span class="token string">'uploadObj'</span> <span class="token punctuation">:</span> <span class="token string">'imageUploadObj'</span><span class="token punctuation">]</span> <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>maxSize <span class="token operator">/</span> <span class="token number">1024</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">M`</span></span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token comment" spellcheck="true">// 文件格式不对回调</span>
-  <span class="token keyword">public</span> formatError <span class="token punctuation">(</span>type<span class="token punctuation">:</span> string<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>$Message<span class="token punctuation">.</span><span class="token function">warning</span><span class="token punctuation">(</span>
-      <span class="token template-string"><span class="token string">`只支持上传</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">[</span>type <span class="token operator">===</span> <span class="token string">'audio'</span> <span class="token operator">?</span> <span class="token string">'uploadObj'</span> <span class="token punctuation">:</span> <span class="token string">'imageUploadObj'</span><span class="token punctuation">]</span> <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>format<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'、'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">格式的文件！`</span></span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token comment" spellcheck="true">// 上传成功的回调（这里的参数大家可能看不懂，我这里传参主要用到index和audioIndex，这跟我的数据结构有关，大家不用太关注，我拿到这两个索引是为了把数据改了）</span>
-  <span class="token comment" spellcheck="true">//大家只要关注response就好了，这是我们上传成功后的返回值，这个后面播放音频是要用到的</span>
-  <span class="token keyword">public</span> handleSuccess <span class="token punctuation">(</span>response<span class="token punctuation">,</span> type<span class="token punctuation">,</span> index<span class="token punctuation">,</span> audioIndex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> <span class="token punctuation">{</span> data <span class="token punctuation">}</span> <span class="token operator">=</span> response<span class="token punctuation">;</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span>$<span class="token keyword">set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>audioMessage<span class="token punctuation">[</span>audioIndex<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'audioPath'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token comment" spellcheck="true">// 上传失败</span>
-  <span class="token keyword">public</span> handleError <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>$Message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'上传失败，请重新上传！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token operator">&lt;</span>script<span class="token operator">></span>
-</code></pre>
-<h3 id="1-2、引用音频标签"><a href="#1-2、引用音频标签" class="headerlink" title="1.2、引用音频标签"></a>1.2、引用音频标签</h3><p>  通过上面的代码，我们已经实现了上传音频。那么接下俩我们使用音频这个标签呢？，直接看代码啊，我们对着代码来说啊。这里我们引用了audio标签，并且只给了src属性，这里调用了getPath方法，那么这个方法的参数其实就是handleSuccess的返回值response结构出来的data，通过getPath这个方法（里面做了一些判断，不用在意这个根据实际情况而定）我们会调用接口拿到这个音频的播放地址，这样就可以播放了（播放和暂停待会放在第三部分一起说）,对了音频有两个特别重要的属性，我在这里简单的说一下，就是currentTime和duration，分别是指当前音频播放的时常和当前音频的总时长，这两个在实际工作中对我们做一些判断是很有作用的。</p>
-
-<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>audio style<span class="token operator">=</span><span class="token string">"display:none"</span> <span class="token punctuation">:</span>src<span class="token operator">=</span><span class="token string">"getPath(audioPath)"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>audio<span class="token operator">></span>
-    <span class="token operator">&lt;</span>Upload ref<span class="token operator">=</span><span class="token string">"audioUpload"</span> <span class="token punctuation">:</span>action<span class="token operator">=</span><span class="token string">"uploadObj.action"</span> <span class="token punctuation">:</span>multiple<span class="token operator">=</span><span class="token string">"false"</span> <span class="token punctuation">:</span>show<span class="token operator">-</span>upload<span class="token operator">-</span>list<span class="token operator">=</span><span class="token string">"false"</span> <span class="token punctuation">:</span>accept<span class="token operator">=</span><span class="token string">"uploadObj.accept"</span> <span class="token punctuation">:</span>format<span class="token operator">=</span><span class="token string">"uploadObj.format"</span> <span class="token punctuation">:</span>max<span class="token operator">-</span>size<span class="token operator">=</span><span class="token string">"uploadObj.maxSize"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>exceeded<span class="token operator">-</span>size<span class="token operator">=</span><span class="token string">"()=>exceededSizeFun('audio')"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>format<span class="token operator">-</span>error<span class="token operator">=</span><span class="token string">"()=>formatError('audio')"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>success<span class="token operator">=</span><span class="token string">"(response)=>handleSuccess(response,'audio',index,audioIndex)"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>error<span class="token operator">=</span><span class="token string">"handleError"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>Button<span class="token operator">></span>导入音频<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>Upload<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"first-container"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>Button @click<span class="token operator">=</span><span class="token string">"getDcId"</span><span class="token operator">></span>点击修改单词ID<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>
+    <span class="token operator">&lt;</span>EditDrawer <span class="token punctuation">:</span>id<span class="token operator">=</span><span class="token string">"currentId"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>EditDrawer<span class="token operator">></span>
   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
 <span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
@@ -506,93 +428,192 @@
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-
+    EditDrawer<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./EditDrawer.vue'</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
 
-  <span class="token comment" spellcheck="true">//获取音频播放路径</span>
-  <span class="token keyword">public</span> getPath <span class="token punctuation">(</span>path<span class="token punctuation">:</span> string<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> finalPath <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'https://'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">||</span> path<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'http://'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        finalPath <span class="token operator">=</span> path<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//这里就是调用接口返回音频播放地址</span>
-        finalPath <span class="token operator">=</span> <span class="token function">getFileResource</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> path<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> finalPath<span class="token punctuation">;</span>
+  currentId<span class="token punctuation">:</span>string <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">//当点击按钮的时候，我们改变currentId的值，这个值会传到子组件的</span>
+  <span class="token keyword">public</span> <span class="token function">getDcId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>currentId <span class="token operator">=</span> <span class="token string">'abandon'</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token operator">&lt;</span>script<span class="token operator">></span>
 </code></pre>
-<h3 id="1-3、协调播放"><a href="#1-3、协调播放" class="headerlink" title="1.3、协调播放"></a>1.3、协调播放</h3><p>  那么从第二部分我们拿到音频的播放地址了，就可以随意播放音频了，那么怎么播放呢。一般是给音频一个特定的ref，然后用this.$refs去访问音频元素，然后调用它的play（）和pause（）方法，也就是播放和暂停。我这里很有讲究的，直接把注释写代码里了，对着代码看，不然不容易解释。</p>
+<h2 id="2-2、第二层"><a href="#2-2、第二层" class="headerlink" title="2.2、第二层"></a>2.2、第二层</h2><p>  然后我们来看第一层的子组件(EditDrawer.vue)，也就是我们的第二层，我们在第二层以id作为参数调用接口请求该单词的所有信息。这一层很重要，我们在这一层拿到请求数据并且把数据传下去了（利用dcInfo字段），同时也在这一层做了收集数据的最后一步，收集到所有的数据（用的Save方法）。</p>
 
 <pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
-  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>audio style<span class="token operator">=</span><span class="token string">"display:none"</span> <span class="token punctuation">:</span>src<span class="token operator">=</span><span class="token string">"getPath(audioPath)"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>audio<span class="token operator">></span>
-    <span class="token operator">&lt;</span>Button type<span class="token operator">=</span><span class="token string">"primary"</span> @click<span class="token operator">=</span><span class="token string">"playAudio(index,audioIndex)"</span><span class="token operator">></span>播放音频<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>
-    <span class="token operator">&lt;</span>Upload ref<span class="token operator">=</span><span class="token string">"audioUpload"</span> <span class="token punctuation">:</span>action<span class="token operator">=</span><span class="token string">"uploadObj.action"</span> <span class="token punctuation">:</span>multiple<span class="token operator">=</span><span class="token string">"false"</span> <span class="token punctuation">:</span>show<span class="token operator">-</span>upload<span class="token operator">-</span>list<span class="token operator">=</span><span class="token string">"false"</span> <span class="token punctuation">:</span>accept<span class="token operator">=</span><span class="token string">"uploadObj.accept"</span> <span class="token punctuation">:</span>format<span class="token operator">=</span><span class="token string">"uploadObj.format"</span> <span class="token punctuation">:</span>max<span class="token operator">-</span>size<span class="token operator">=</span><span class="token string">"uploadObj.maxSize"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>exceeded<span class="token operator">-</span>size<span class="token operator">=</span><span class="token string">"()=>exceededSizeFun('audio')"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>format<span class="token operator">-</span>error<span class="token operator">=</span><span class="token string">"()=>formatError('audio')"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>success<span class="token operator">=</span><span class="token string">"(response)=>handleSuccess(response,'audio',index,audioIndex)"</span> <span class="token punctuation">:</span>on<span class="token operator">-</span>error<span class="token operator">=</span><span class="token string">"handleError"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>Button<span class="token operator">></span>导入音频<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>Upload<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"next-container"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"other-operate"</span><span class="token operator">></span>
+      <span class="token comment" spellcheck="true">/* 在这里你可以写一些其他的东西嘛，就是不要觉局限于一个页面就引入一个组件 */</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>Button @click<span class="token operator">=</span><span class="token string">"Save()"</span><span class="token operator">></span>点击修改单词ID<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"main-container"</span><span class="token operator">></span>
+      <span class="token comment" spellcheck="true">/* 在这里，我们把数据传下去了，层层往下传就好了 */</span>
+      <span class="token operator">&lt;</span>ProEdit <span class="token punctuation">:</span>dataInfo<span class="token operator">=</span><span class="token string">"dcInfo"</span> ref<span class="token operator">=</span><span class="token string">"proEdit"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>ProEdit<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
 <span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> Prop<span class="token punctuation">,</span> Watch <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//调用接口</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getDcDetail <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/http/api/http.ts'</span><span class="token punctuation">;</span>
 
 @<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-
+    ProEdit<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./PropertyManage/index.vue'</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
 
-  <span class="token comment" spellcheck="true">//用于判断当前音频是否处在播放状态</span>
-  isPlaying <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-  <span class="token comment" spellcheck="true">//用于判断是否点击的是同意音频，用于协调不同音频的播放设置</span>
-  tempAudio <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  dcInfo<span class="token punctuation">:</span>any <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">public</span> <span class="token function">playAudio</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> audioIndex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//首先我这里一个页面有好几个音频，所以在点击播放时先拿到所有的音频，依次遍历暂停，防止都在播放干扰</span>
-    <span class="token keyword">const</span> audioAll <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">'audio'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> i <span class="token keyword">in</span> audioAll<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> audioAll<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        audioAll<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">//接受id</span>
+  @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> String<span class="token punctuation">,</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token string">''</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  id<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">//监听id，一旦传入id,就请求数据</span>
+  @<span class="token function">Watch</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+    deep<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    immediate<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">public</span> <span class="token function">getIdMessage</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getDcInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">//利用传进来的两个参数，访问到当前被点击的音频</span>
-    <span class="token keyword">const</span> currentAudio <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'audio'</span> <span class="token operator">+</span> index <span class="token operator">+</span> audioIndex<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>currentAudio<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment" spellcheck="true">//判断：如果这个音频是不是上一次点击的音频</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>tempAudio <span class="token operator">===</span> index<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> audioIndex<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//如果点击的是上一次点击的音频，我们要做判断，改音频是不是在播放（isPlaying）属性，如果是就暂停，如果不是就播放</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>currentAudio <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>currentTime <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token keyword">this</span><span class="token punctuation">.</span>isPlaying <span class="token operator">===</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token comment" spellcheck="true">//这里是播放，注意用了currentTime，这个是播放的时间，置为0就是从头播放</span>
-          <span class="token punctuation">(</span>currentAudio <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>currentTime <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">//播放</span>
-          <span class="token punctuation">(</span>currentAudio <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">//播放的同时，我们给一个状态，表示当前有音频正在播放</span>
-          <span class="token keyword">this</span><span class="token punctuation">.</span>isPlaying <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-          <span class="token punctuation">(</span>currentAudio <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-          <span class="token comment" spellcheck="true">//暂停的时候我们也给一个状态，说明当前没有音频在播放</span>
-          <span class="token keyword">this</span><span class="token punctuation">.</span>isPlaying <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//如果不是上一次点击的音频，直接走else，那就是直接从头开始播放该音频</span>
-        <span class="token punctuation">(</span>currentAudio <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">(</span>currentAudio <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>currentTime <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>isPlaying <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      <span class="token comment" spellcheck="true">//这里就是只要点击了音频，那我们就更新一下点击的是哪一个音频，用于与下一次点击时候做对比</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span>tempAudio <span class="token operator">=</span> index<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> audioIndex<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">async</span> <span class="token function">getDcInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>Promise<span class="token operator">&lt;</span>any<span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getDcDetail</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      id<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//实际情况下肯定不会这么简单了，是要对请求过来的数据做对应处理的，知道就好</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>dcInfo <span class="token operator">=</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">//可以看到我们用了$refs访问了子组件的方法收集了所有的数据，然后调用了接口，把数据传给了后端</span>
+  <span class="token keyword">public</span> <span class="token function">Save</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>proEdit <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">saveDc</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$Message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">'暂存成功！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token operator">&lt;</span>script<span class="token operator">></span>
 </code></pre>
-<p>  好啦，这里简单说一下协调播放后的效果是什么样的。当你点击任何一个音频的时候，其他正在播放的音频会暂停，被点击的音频会从头播放；当一个音频正在播放，我们点击它的时候它会暂停，暂停后你再点击，它会从头播放。当有一个音频在播放时，我们去点击另外一个音频，那么这个音频会暂停，那个被点击的音频会从头播放。</p>
+<h2 id="2-3、第三层"><a href="#2-3、第三层" class="headerlink" title="2.3、第三层"></a>2.3、第三层</h2><p>  然后我们来看第三层，这一层主要是把信息散发出去，因为数据是分为好几个小模块的，会在代码里写，大家注意看数据的结构，我们把数据分发下去。并且这个组件里有个getData方法收集数据，还记得我们在第二层里用的save方法就是在调用这个getData么</p>
+
+<p>  这里用的component动态生成组件，我的其他文章（工作知识难点系列）里有解释，看不懂的小伙伴可以去看一下。</p>
+
+<p>  这里的dataInfo就是数据的主体，它有三个部分，每个部分有对应的数据去渲染一个component组件，并且在component组件里，利用v-model绑定了数据的每一部分，这样改变数据的时候我们就可以直接双向绑定，改变的数据会直接传到这一层，所以我们只要改数据，这一层的dataInfon拿到的永远都是更新的数据。</p>
+
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"last-container"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"module-container"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>div v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"(item, index) in moduleArr"</span> <span class="token punctuation">:</span>key<span class="token operator">=</span><span class="token string">"index"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>component <span class="token punctuation">:</span>is<span class="token operator">=</span><span class="token string">"item.code"</span> <span class="token punctuation">:</span>data<span class="token operator">=</span><span class="token string">"dataInfo[item.code]"</span> <span class="token punctuation">:</span>ref<span class="token operator">=</span><span class="token string">"item.code"</span> <span class="token punctuation">:</span>id<span class="token operator">=</span><span class="token string">"dataInfo.baseInfo.id"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>component<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> Prop<span class="token punctuation">,</span> Watch <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    FirstSection<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./FirstSection.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    SecondSection<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./SecondSection.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    ThirdSection<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./ThirdSection.vue'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+
+<span class="token comment" spellcheck="true">//通过传值拿到dataInfo,组件会根据dataInfo去渲染</span>
+  @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> Object<span class="token punctuation">,</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  dataInfo<span class="token punctuation">:</span> any<span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">//通过循环moduleArr实现三个部分的分别渲染，每一部分引入自己对应的信息</span>
+  <span class="token keyword">public</span> moduleArr<span class="token punctuation">:</span> Array<span class="token operator">&lt;</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+    code<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token operator">></span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'第一部分信息'</span><span class="token punctuation">,</span>
+    code<span class="token punctuation">:</span> <span class="token string">'FirstSection'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'第二部分信息'</span><span class="token punctuation">,</span>
+    code<span class="token punctuation">:</span> <span class="token string">'SecondSection'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'第三部分信息'</span><span class="token punctuation">,</span>
+    code<span class="token punctuation">:</span> <span class="token string">'ThirdSection'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> getData <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//正常这里是要做一些数据处理的，更具具体情况做不同的事情，大家心里有数就好我这里就</span>
+    <span class="token comment" spellcheck="true">//直接返回数据了，应为这个dataInfo就是最新的数据</span>
+    <span class="token keyword">return</span> dataInfo<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">/* 为了防止大家看不懂，我把数据模拟结构写一下，简单模拟，别太当真
+  const dataInfo = {
+    FirstSection: {
+      name: '我是第一部分',
+      content: '我是第一部分的内容'
+    },
+    SecondSection: {
+      name: '我是第一部分',
+      content: '我是第一部分的内容'
+    },
+    ThirdSection: {
+      name: '我是第一部分',
+      content: '我是第一部分的内容'
+    }
+  } */</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+</code></pre>
+<h2 id="2-4、第四层"><a href="#2-4、第四层" class="headerlink" title="2.4、第四层"></a>2.4、第四层</h2><p>  为了大家，能够理解为啥上一层的dataInfo是一直更新的，并且更了解结构，我写了第四层，就拿数据的第一部分为例吧。我们直接用v-modal绑定的data的两个字段，这样在改变input输入框的值的时候，结果会直接改变data的值，并且会把data传到上一层的dataInfo，这样上一层的dataInfo就是一直都是最新的，所以在第二层点击保存的时候，用了第三层的方法，直接返回dataInfo是可以的。</p>
+
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"last-last-container"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>Input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"data.name"</span> clearable <span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>Input type<span class="token operator">=</span><span class="token string">"text"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"data.content"</span> clearable <span class="token operator">/</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">></span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Vue<span class="token punctuation">,</span> Component<span class="token punctuation">,</span> Prop<span class="token punctuation">,</span> Watch <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">TestCase</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+
+  <span class="token comment" spellcheck="true">//这里我们接收了上一层的dataInfo的第一部分信息</span>
+  @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> Object<span class="token punctuation">,</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  data<span class="token punctuation">:</span> any<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+</code></pre>
+<p>  写完啦，好累呀。。。。最后感谢露哥！！！！露哥也听不见。。。。。。</p>
+
                 
             </div>
             <hr/>
@@ -618,7 +639,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jjwu27.github.io/2022/12/11/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6-3%E3%80%81audio%E6%A0%87%E7%AD%BE%E7%9A%84%E4%BD%BF%E7%94%A8/">https://jjwu27.github.io/2022/12/11/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6-3%E3%80%81audio%E6%A0%87%E7%AD%BE%E7%9A%84%E4%BD%BF%E7%94%A8/</a>
+                    <a href="https://jjwu27.github.io/2022/12/15/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-10%E3%80%81%E6%95%B0%E6%8D%AE%E6%B5%81%E4%BC%A0%E9%80%92%E6%A1%86%E6%9E%B6/">https://jjwu27.github.io/2022/12/15/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-10%E3%80%81%E6%95%B0%E6%8D%AE%E6%B5%81%E4%BC%A0%E9%80%92%E6%A1%86%E6%9E%B6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -656,8 +677,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
-                                    <span class="chip bg-color">自定义封装组件</span>
+                                <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
+                                    <span class="chip bg-color">工作知识总结</span>
                                 </a>
                             
                         </div>
@@ -1003,12 +1024,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/12/17/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E9%9A%BE%E7%82%B9%E6%91%98%E8%A6%81%E7%B3%BB%E5%88%97-11%E3%80%81PDF.js%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="十一、在线预览PDF">
+                        
+                        <span class="card-title">十一、在线预览PDF</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-17
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%83%AD%E7%88%B1%E6%88%91%E7%9A%84%E5%B7%A5%E4%BD%9C/" class="post-category">
+                                    热爱我的工作
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B7%A5%E4%BD%9C%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">工作知识总结</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/12/11/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6-3%E3%80%81audio%E6%A0%87%E7%AD%BE%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                <a href="/2022/12/11/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-3%E3%80%81audio%E6%A0%87%E7%AD%BE%E7%9A%84%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
                         
@@ -1026,56 +1095,6 @@
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2022-12-11
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/" class="post-category">
-                                    组件封装
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B0%81%E8%A3%85%E7%BB%84%E4%BB%B6/">
-                        <span class="chip bg-color">自定义封装组件</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/12/05/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85-2%E3%80%81iview-Table%E4%B9%8B%E5%8A%A8%E6%80%81%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="二、iview-Table之动态合并单元格">
-                        
-                        <span class="card-title">二、iview-Table之动态合并单元格</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-05
                             </span>
                         <span class="publish-author">
                             
